@@ -1,0 +1,179 @@
+.page {
+  max-width: 92rem;
+  margin: 0 auto;
+  padding: calc(var(--header-height) + 3.2rem) 2.4rem 6.4rem;
+}
+
+.page-head {
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.page-desc {
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+.page-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.4rem;
+}
+
+.page-tab {
+  padding: 0.8rem 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.page-tab:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.page-tab-active {
+  color: #fff;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ================== SKELETON ================== */
+.skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 3.2rem;
+}
+
+.skeleton-card {
+  display: flex;
+  gap: 1.6rem;
+  padding: 2rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+}
+
+.skeleton-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.skeleton {
+  display: block;
+  background-color: #d4d4d4;
+  border-radius: 0.6rem;
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    background-color: #d4d4d4;
+  }
+
+  50% {
+    background-color: #f0f0f0;
+  }
+}
+
+.skeleton-avatar {
+  flex-shrink: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+}
+
+.skeleton-title {
+  width: 70%;
+  height: 1.8rem;
+}
+
+.skeleton-text {
+  height: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.skeleton-text-full {
+  width: 100%;
+}
+
+.skeleton-text-short {
+  width: 55%;
+}
+
+.skeleton-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.skeleton-chip {
+  width: 8rem;
+  height: 1.6rem;
+  border-radius: 999px;
+}
+
+/* ================== SPINNER ================== */
+.loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  min-height: 36rem;
+  margin-top: 3.2rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+}
+
+.spinner {
+  width: 5.6rem;
+  height: 5.6rem;
+  border: 0.5rem solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.loading-text {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (width <= 767px) {
+  .page {
+    padding: calc(var(--header-height) + 2.4rem) 1.6rem 4.8rem;
+  }
+
+  .page-title {
+    font-size: 2.4rem;
+  }
+
+  .skeleton-card {
+    padding: 1.6rem;
+  }
+}

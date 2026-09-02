@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Học Lập Trình Để Đi Làm | F8</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Be Vietnam Pro", Arial, sans-serif;
+        --color-f8: #f05123;
+        --color-f8-soft: #fff4f0;
+        --color-ink: #292929;
+        --color-muted: #757575;
+        --color-line: #e8ebed;
+        --color-soft: #f7f8fa;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-white pt-20 font-sans text-ink lg:grid lg:grid-cols-[6rem_1fr]"
+  >
+    <input type="checkbox" id="menu" class="peer sr-only" />
+
+    <!-- ================== HEADER ================== -->
+    <header
+      class="fixed inset-x-0 top-0 z-50 flex h-20 items-center gap-4 border-b border-line bg-white px-4 lg:px-8"
+    >
+      <label
+        for="menu"
+        class="flex size-10 cursor-pointer items-center justify-center rounded-lg text-xl hover:bg-soft lg:hidden"
+        aria-label="Mở menu"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
+      <a href="../index.html">
+        <img src="../assets/favicon.png" alt="F8" class="size-10 rounded-lg" />
+      </a>
+
+      <div
+        class="hidden max-w-232 flex-1 items-center gap-3 rounded-full border border-line px-4 py-3 md:flex"
+      >
+        <i class="fa-solid fa-magnifying-glass text-muted"></i>
+        <input
+          type="search"
+          placeholder="Tìm khóa học, bài viết, hỏi đáp..."
+          aria-label="Tìm kiếm"
+          class="min-w-0 flex-1 outline-none"
+        />
+      </div>
+
+      <div class="ml-auto flex items-center gap-6">
+        <a
+          href="#"
+          class="flex items-center gap-2 text-[15px] font-medium whitespace-nowrap hover:text-f8"
+        >
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span class="hidden lg:inline">Khóa học của tôi</span>
+        </a>
+
+        <a href="#" class="relative hover:text-f8" aria-label="Thông báo">
+          <i class="fa-solid fa-bell"></i>
+          <span
+            class="absolute -top-2 left-2.5 min-w-[18px] rounded-full bg-f8 px-1.5 text-center text-[11px] leading-[18px] font-semibold text-white"
+            >3</span
+          >
+        </a>
+
+        <a href="#" class="size-8 overflow-hidden rounded-full">
+          <img
+            src="../assets/avatar.png"
+            alt="Hương Trà"
+            class="size-full object-cover"
+          />
+        </a>
+      </div>
+    </header>
+
+    <label
+      for="menu"
+      class="fixed inset-0 top-20 z-30 hidden bg-black/40 peer-checked:block lg:hidden!"
+    ></label>
+
+    <!-- ================== SIDEBAR ================== -->
+    <aside
+      class="fixed top-20 bottom-0 left-0 z-40 w-24 -translate-x-full overflow-y-auto border-r border-line bg-white p-2 py-4 transition-transform duration-300 peer-checked:translate-x-0 lg:sticky lg:bottom-auto lg:translate-x-0 lg:self-start lg:border-r-0"
+    >
+      <nav>
+        <ul class="flex flex-col gap-1">
+          <li>
+            <a
+              href="#"
+              class="flex flex-col items-center gap-1.5 rounded-lg bg-f8-soft px-1 py-3 text-center text-xs font-medium text-f8"
+            >
+              <i class="fa-solid fa-house text-xl"></i>
+              <span>Trang chủ</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex flex-col items-center gap-1.5 rounded-lg px-1 py-3 text-center text-xs font-medium hover:bg-soft"
+            >
+              <i class="fa-solid fa-road text-xl"></i>
+              <span>Lộ trình</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex flex-col items-center gap-1.5 rounded-lg px-1 py-3 text-center text-xs font-medium hover:bg-soft"
+            >
+              <i class="fa-solid fa-newspaper text-xl"></i>
+              <span>Bài viết</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex flex-col items-center gap-1.5 rounded-lg px-1 py-3 text-center text-xs font-medium hover:bg-soft"
+            >
+              <i class="fa-solid fa-bullhorn text-xl"></i>
+              <span>Bản tin</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="../day06/discussions.html"
+              class="flex flex-col items-center gap-1.5 rounded-lg px-1 py-3 text-center text-xs font-medium hover:bg-soft"
+            >
+              <i class="fa-solid fa-comments text-xl"></i>
+              <span>Hỏi đáp</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="../day06/assignments.html"
+              class="flex flex-col items-center gap-1.5 rounded-lg px-1 py-3 text-center text-xs font-medium hover:bg-soft"
+            >
+              <i class="fa-solid fa-clipboard-list text-xl"></i>
+              <span>Bài tập</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ================== MAIN ================== -->
+    <main class="mx-auto w-full max-w-320 px-4 pb-16 xl:px-8">
+      <!-- ---------- TIN ---------- -->
+      <section class="pt-8">
+        <ul class="flex gap-6 overflow-x-auto pb-2">
+          <li>
+            <a href="#" class="flex w-20 shrink-0 flex-col items-center gap-2">
+              <span
+                class="rounded-full bg-gradient-to-br from-f8 to-orange-300 p-[3px]"
+              >
+                <img
+                  src="https://files.f8.edu.vn/f8-prod/avatars/6a45c8c490545.jpg"
+                  alt="Nga Trần Phương"
+                  class="size-16 rounded-full border-[3px] border-white object-cover"
+                />
+              </span>
+              <span class="w-full truncate text-center text-xs"
+                >Nga Trần Phương</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex w-20 shrink-0 flex-col items-center gap-2">
+              <span
+                class="rounded-full bg-gradient-to-br from-f8 to-orange-300 p-[3px]"
+              >
+                <img
+                  src="https://files.f8.edu.vn/f8-prod/avatars/69fef6725960f.jpg"
+                  alt="Mỹ Anh Đỗ"
+                  class="size-16 rounded-full border-[3px] border-white object-cover"
+                />
+              </span>
+              <span class="w-full truncate text-center text-xs">Mỹ Anh Đỗ</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex w-20 shrink-0 flex-col items-center gap-2">
+              <span
+                class="rounded-full bg-gradient-to-br from-f8 to-orange-300 p-[3px]"
+              >
+                <img
+                  src="https://files.f8.edu.vn/f8-prod/avatars/69e86df884a44.png"
+                  alt="Tây Du Code"
+                  class="size-16 rounded-full border-[3px] border-white object-cover"
+                />
+              </span>
+              <span class="w-full truncate text-center text-xs"
+                >Tây Du Code</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex w-20 shrink-0 flex-col items-center gap-2">
+              <span
+                class="rounded-full bg-gradient-to-br from-f8 to-orange-300 p-[3px]"
+              >
+                <img
+                  src="../assets/avatar.png"
+                  alt="Hương Trà"
+                  class="size-16 rounded-full border-[3px] border-white object-cover"
+                />
+              </span>
+              <span class="w-full truncate text-center text-xs">Hương Trà</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ---------- BANNER ---------- -->
+      <section class="mt-14">
+        <div
+          class="aspect-[5/1] cursor-pointer rounded-2xl bg-[url('https://files.f8.edu.vn/f8-prod/banners/36/6a6001d75ff0a.png')] bg-cover bg-center bg-no-repeat shadow-lg"
+        ></div>
+      </section>
+
+      <!-- ---------- KHÓA HỌC PRO ---------- -->
+      <section class="mt-14">
+        <div class="mb-6 flex items-baseline justify-between gap-4">
+          <h2 class="text-2xl font-bold">Khóa học Pro</h2>
+          <a href="#" class="text-sm font-semibold text-f8">Xem tất cả</a>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <article
+            class="flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="relative block">
+              <img
+                src="https://files.f8.edu.vn/f8-prod/courses/15/62f13d2424a47.png"
+                alt="HTML CSS Pro"
+                class="h-40 w-full object-cover"
+              />
+              <span
+                class="absolute top-3 left-3 rounded-full bg-f8 px-2.5 py-0.5 text-xs font-semibold text-white"
+                >Pro</span
+              >
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg font-bold">
+                <a href="#" class="hover:text-f8">HTML CSS Pro</a>
+              </h3>
+              <p class="flex-1 text-sm text-muted">
+                Phù hợp cho cả người mới bắt đầu, lên tới 8 dự án trên Figma,
+                300+ bài tập và flashcards.
+              </p>
+              <p class="flex items-center gap-2.5 text-sm text-muted">
+                <span class="text-lg font-bold text-f8">1.299.000đ</span>
+                <span class="line-through">2.500.000đ</span>
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="relative block">
+              <img
+                src="https://files.f8.edu.vn/f8-prod/courses/19/66aa28194b52b.png"
+                alt="JavaScript Pro"
+                class="h-40 w-full object-cover"
+              />
+              <span
+                class="absolute top-3 left-3 rounded-full bg-f8 px-2.5 py-0.5 text-xs font-semibold text-white"
+                >Pro</span
+              >
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg font-bold">
+                <a href="#" class="hover:text-f8">JavaScript Pro</a>
+              </h3>
+              <p class="flex-1 text-sm text-muted">
+                Nền tảng vững chắc để học tiếp React, Vue.js, Node.js. Hiểu sâu
+                bản chất của JavaScript.
+              </p>
+              <p class="flex items-center gap-2.5 text-sm text-muted">
+                <span class="text-lg font-bold text-f8">1.399.000đ</span>
+                <span class="line-through">3.299.000đ</span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------- KHÓA HỌC MIỄN PHÍ ---------- -->
+      <section class="mt-14">
+        <div class="mb-6 flex items-baseline justify-between gap-4">
+          <h2 class="text-2xl font-bold">Khóa học miễn phí</h2>
+          <a href="#" class="text-sm font-semibold text-f8">Xem tất cả</a>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <article
+            class="flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="block">
+              <img
+                src="https://files.f8.edu.vn/f8-prod/courses/7.png"
+                alt="Kiến Thức Nhập Môn IT"
+                class="h-40 w-full object-cover"
+              />
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg font-bold">
+                <a href="#" class="hover:text-f8">Kiến Thức Nhập Môn IT</a>
+              </h3>
+              <p class="flex-1 text-sm text-muted">
+                Cái nhìn tổng quan về ngành IT - Lập trình web, nên xem trước
+                khi bắt đầu.
+              </p>
+              <p class="flex items-center gap-2.5 text-sm text-muted">
+                <i class="fa-solid fa-user-group"></i> 140.350
+                <span class="ml-auto font-semibold text-f8">Miễn phí</span>
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="block">
+              <img
+                src="https://files.f8.edu.vn/f8-prod/courses/13/13.png"
+                alt="Xây Dựng Website với ReactJS"
+                class="h-40 w-full object-cover"
+              />
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg font-bold">
+                <a href="#" class="hover:text-f8"
+                  >Xây Dựng Website với ReactJS</a
+                >
+              </h3>
+              <p class="flex-1 text-sm text-muted">
+                ReactJS từ cơ bản tới nâng cao, đủ để làm hầu hết dự án thường
+                gặp.
+              </p>
+              <p class="flex items-center gap-2.5 text-sm text-muted">
+                <i class="fa-solid fa-user-group"></i> 81.392
+                <span class="ml-auto font-semibold text-f8">Miễn phí</span>
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="block">
+              <img
+                src="https://files.f8.edu.vn/f8-prod/courses/6.png"
+                alt="Node & ExpressJS"
+                class="h-40 w-full object-cover"
+              />
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg font-bold">
+                <a href="#" class="hover:text-f8">Node &amp; ExpressJS</a>
+              </h3>
+              <p class="flex-1 text-sm text-muted">
+                Học Back-end với Node &amp; ExpressJS, xây dựng RESTful API cho
+                website.
+              </p>
+              <p class="flex items-center gap-2.5 text-sm text-muted">
+                <i class="fa-solid fa-user-group"></i> 50.791
+                <span class="ml-auto font-semibold text-f8">Miễn phí</span>
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="block">
+              <img
+                src="https://files.f8.edu.vn/f8-prod/courses/14/624faac11d109.png"
+                alt="Làm việc với Terminal & Ubuntu"
+                class="h-40 w-full object-cover"
+              />
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg font-bold">
+                <a href="#" class="hover:text-f8"
+                  >Làm việc với Terminal &amp; Ubuntu</a
+                >
+              </h3>
+              <p class="flex-1 text-sm text-muted">
+                Sở hữu một Terminal hiện đại, mạnh mẽ và học cách làm việc với
+                Ubuntu.
+              </p>
+              <p class="flex items-center gap-2.5 text-sm text-muted">
+                <i class="fa-solid fa-user-group"></i> 22.230
+                <span class="ml-auto font-semibold text-f8">Miễn phí</span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------- LỘ TRÌNH ---------- -->
+      <section class="mt-14">
+        <div class="mb-6 flex items-baseline justify-between gap-4">
+          <h2 class="text-2xl font-bold">Lộ trình học</h2>
+          <a href="#" class="text-sm font-semibold text-f8">Xem tất cả</a>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-2">
+          <a
+            href="#"
+            class="flex items-center gap-5 rounded-xl border border-line bg-soft p-5 transition hover:-translate-y-1 hover:shadow-lg"
+          >
+            <img
+              src="https://files.f8.edu.vn/f8-prod/learning-paths/2/63b4642136f3e.png"
+              alt="Lộ trình học Front-end"
+              class="size-20 shrink-0 object-contain"
+            />
+            <div>
+              <h3 class="text-lg font-bold">Lộ trình học Front-end</h3>
+              <p class="mt-1 text-sm text-muted">
+                Lập trình viên Front-end là người xây dựng ra giao diện
+                websites.
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="flex items-center gap-5 rounded-xl border border-line bg-soft p-5 transition hover:-translate-y-1 hover:shadow-lg"
+          >
+            <img
+              src="https://files.f8.edu.vn/f8-prod/learning-paths/3/63b4641535b16.png"
+              alt="Lộ trình học Back-end"
+              class="size-20 shrink-0 object-contain"
+            />
+            <div>
+              <h3 class="text-lg font-bold">Lộ trình học Back-end</h3>
+              <p class="mt-1 text-sm text-muted">
+                Lập trình viên Back-end là người làm việc với dữ liệu, nặng tính
+                logic.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ---------- BÀI VIẾT ---------- -->
+      <section class="mt-14">
+        <div class="mb-6 flex items-baseline justify-between gap-4">
+          <h2 class="text-2xl font-bold">Bài viết nổi bật</h2>
+          <a href="#" class="text-sm font-semibold text-f8">Xem tất cả</a>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <article
+            class="group flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="block aspect-video overflow-hidden">
+              <img
+                src="https://files.f8.edu.vn/f8-prod/blog_posts/14401/thumb_260816080449_6a810cb18522e1.15711231.png"
+                alt="Build chatbot AI bằng OpenAI, Claude, Gemini API"
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+              />
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg leading-snug font-bold">
+                <a href="#" class="hover:text-f8">
+                  Build chatbot AI bằng OpenAI, Claude, Gemini API: So sánh và
+                  chọn nền tảng phù hợp
+                </a>
+              </h3>
+              <p class="mt-auto flex items-center gap-2.5 text-sm text-muted">
+                <img
+                  src="../assets/avatar.png"
+                  alt="Hương Trà"
+                  class="size-6 rounded-full object-cover"
+                />
+                <span>Hương Trà</span>
+                <span class="text-gray-300">·</span>
+                <span>1 phút đọc</span>
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="block aspect-video overflow-hidden">
+              <img
+                src="https://files.f8.edu.vn/f8-prod/blog_posts/14449/thumb_260824080507_6a8b98c3349594.49974572.png"
+                alt="Tailwind CSS 2026: Xây UI nhanh hơn với shadcn/ui"
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+              />
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg leading-snug font-bold">
+                <a href="#" class="hover:text-f8">
+                  Tailwind CSS 2026: Xây UI nhanh hơn với component-first,
+                  shadcn/ui và design system
+                </a>
+              </h3>
+              <p class="mt-auto flex items-center gap-2.5 text-sm text-muted">
+                <img
+                  src="../assets/avatar.png"
+                  alt="Hương Trà"
+                  class="size-6 rounded-full object-cover"
+                />
+                <span>Hương Trà</span>
+                <span class="text-gray-300">·</span>
+                <span>1 phút đọc</span>
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="block aspect-video overflow-hidden">
+              <img
+                src="https://files.f8.edu.vn/f8-prod/blog_posts/14389/thumb_260814080523_6a7e69d3d0d610.90210562.png"
+                alt="Tối ưu Core Web Vitals 2026"
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+              />
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg leading-snug font-bold">
+                <a href="#" class="hover:text-f8">
+                  Tối ưu Core Web Vitals 2026: Cách cải thiện INP, LCP và tốc độ
+                  React/Next.js
+                </a>
+              </h3>
+              <p class="mt-auto flex items-center gap-2.5 text-sm text-muted">
+                <img
+                  src="../assets/avatar.png"
+                  alt="Hương Trà"
+                  class="size-6 rounded-full object-cover"
+                />
+                <span>Hương Trà</span>
+                <span class="text-gray-300">·</span>
+                <span>1 phút đọc</span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------- VIDEO ---------- -->
+      <section class="mt-14">
+        <div class="mb-6 flex items-baseline justify-between gap-4">
+          <h2 class="text-2xl font-bold">Video nổi bật</h2>
+          <a
+            href="https://www.youtube.com/c/F8VNOfficial"
+            target="_blank"
+            rel="noreferrer"
+            class="text-sm font-semibold text-f8"
+            >Xem tất cả</a
+          >
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <article
+            class="group flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="relative block aspect-video overflow-hidden">
+              <img
+                src="https://img.youtube.com/vi/M62l1xA5Eu8/mqdefault.jpg"
+                alt="Kiến Thức Nhập Môn IT"
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:opacity-75"
+              />
+              <span
+                class="absolute top-1/2 left-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-f8 transition group-hover:scale-115"
+              >
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg leading-snug font-bold">
+                <a href="#" class="hover:text-f8">Kiến Thức Nhập Môn IT</a>
+              </h3>
+            </div>
+          </article>
+
+          <article
+            class="group flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="relative block aspect-video overflow-hidden">
+              <img
+                src="https://img.youtube.com/vi/x0fSBAgBrOQ/mqdefault.jpg"
+                alt="Xây Dựng Website với ReactJS"
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:opacity-75"
+              />
+              <span
+                class="absolute top-1/2 left-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-f8 transition group-hover:scale-115"
+              >
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg leading-snug font-bold">
+                <a href="#" class="hover:text-f8"
+                  >Xây Dựng Website với ReactJS</a
+                >
+              </h3>
+            </div>
+          </article>
+
+          <article
+            class="group flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="relative block aspect-video overflow-hidden">
+              <img
+                src="https://img.youtube.com/vi/z2f7RHgvddc/mqdefault.jpg"
+                alt="Node & ExpressJS"
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:opacity-75"
+              />
+              <span
+                class="absolute top-1/2 left-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-f8 transition group-hover:scale-115"
+              >
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg leading-snug font-bold">
+                <a href="#" class="hover:text-f8">Node &amp; ExpressJS</a>
+              </h3>
+            </div>
+          </article>
+
+          <article
+            class="group flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <a href="#" class="relative block aspect-video overflow-hidden">
+              <img
+                src="https://img.youtube.com/vi/7ppRSaGT1uw/mqdefault.jpg"
+                alt="Làm việc với Terminal & Ubuntu"
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:opacity-75"
+              />
+              <span
+                class="absolute top-1/2 left-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-f8 transition group-hover:scale-115"
+              >
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </a>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h3 class="text-lg leading-snug font-bold">
+                <a href="#" class="hover:text-f8"
+                  >Làm việc với Terminal &amp; Ubuntu</a
+                >
+              </h3>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================== FOOTER ================== -->
+    <footer class="border-t border-line bg-soft px-4 pt-12 pb-6 lg:col-span-2">
+      <div
+        class="mx-auto grid max-w-320 gap-8 sm:grid-cols-2 lg:grid-cols-[2fr_repeat(3,1fr)]"
+      >
+        <div>
+          <img src="../assets/favicon.png" alt="F8" class="mb-3 size-9" />
+          <h2 class="mb-4 text-sm font-bold text-f8">
+            HỌC LẬP TRÌNH ĐỂ ĐI LÀM
+          </h2>
+          <p class="text-sm text-muted">
+            <b>Điện thoại:</b> 08 1919 8989<br />
+            <b>Email:</b> contact@f8.edu.vn<br />
+            <b>Địa chỉ:</b> Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội
+          </p>
+        </div>
+
+        <div>
+          <h3 class="mb-4 font-bold">Về F8</h3>
+          <ul class="flex flex-col gap-2.5 text-sm text-muted">
+            <li><a href="#" class="hover:text-f8">Giới thiệu</a></li>
+            <li><a href="#" class="hover:text-f8">Liên hệ</a></li>
+            <li>
+              <a href="#" class="hover:text-f8">Điều khoản &amp; Quy định</a>
+            </li>
+            <li><a href="#" class="hover:text-f8">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-4 font-bold">Hỗ trợ</h3>
+          <ul class="flex flex-col gap-2.5 text-sm text-muted">
+            <li><a href="#" class="hover:text-f8">Chính sách thanh toán</a></li>
+            <li><a href="#" class="hover:text-f8">Chính sách vận chuyển</a></li>
+            <li><a href="#" class="hover:text-f8">Chính sách kiểm hàng</a></li>
+            <li><a href="#" class="hover:text-f8">Quy định về giá</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-4 font-bold">Công cụ</h3>
+          <ul class="flex flex-col gap-2.5 text-sm text-muted">
+            <li><a href="#" class="hover:text-f8">Tạo CV xin việc</a></li>
+            <li><a href="#" class="hover:text-f8">Rút gọn liên kết</a></li>
+            <li><a href="#" class="hover:text-f8">Clip-path maker</a></li>
+            <li><a href="#" class="hover:text-f8">Snippet generator</a></li>
+            <li><a href="#" class="hover:text-f8">CSS Grid generator</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="mx-auto mt-8 flex max-w-320 flex-wrap items-center justify-between gap-4 border-t border-line pt-6 text-sm text-muted"
+      >
+        <p>© 2018 - 2026 F8. Nền tảng học lập trình hàng đầu Việt Nam.</p>
+        <div class="flex gap-3 text-xl">
+          <a href="#" aria-label="Youtube" class="hover:text-f8">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" aria-label="Facebook" class="hover:text-f8">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" aria-label="Tiktok" class="hover:text-f8">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
