@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2 - Chuyển số sang ngày trong tuần | F8</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Be Vietnam Pro", Arial, sans-serif;
+        --color-f8: #f05123;
+        --color-f8-soft: #fff4f0;
+        --color-ink: #292929;
+        --color-muted: #757575;
+        --color-line: #e8ebed;
+        --color-soft: #f7f8fa;
+      }
+    </style>
+  </head>
+
+  <body
+    class="scheme-light min-h-screen bg-f8-soft bg-linear-to-b from-f8-soft to-white font-sans text-ink"
+  >
+    <main class="mx-auto max-w-2xl px-4 py-12">
+      <p class="mb-6 text-sm font-semibold text-muted">
+        <a href="../index.html" class="hover:text-f8">← Về trang chủ</a>
+      </p>
+
+      <h1 class="text-2xl font-bold sm:text-3xl">
+        Bài 2 — Chuyển số sang ngày trong tuần
+      </h1>
+      <p class="mt-2 text-muted">
+        Nhập một số nguyên từ 1 đến 7 để xem ngày trong tuần tương ứng.
+      </p>
+
+      <div
+        class="mt-8 rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8"
+      >
+        <section
+          class="rounded-xl border border-line bg-soft px-5 py-4 text-sm"
+        >
+          <p class="mb-2 font-bold">Quy tắc</p>
+          <ul class="flex flex-col gap-1 text-muted">
+            <li>1 → Chủ Nhật</li>
+            <li>2 → Thứ Hai</li>
+            <li>3 → Thứ Ba</li>
+            <li>4 → Thứ Tư</li>
+            <li>5 → Thứ Năm</li>
+            <li>6 → Thứ Sáu</li>
+            <li>7 → Thứ Bảy</li>
+            <li>Số khác 1 - 7 → Không hợp lệ</li>
+          </ul>
+        </section>
+
+        <form id="weekday-form" class="mt-6 flex flex-col gap-4" novalidate>
+          <div class="flex flex-col gap-1.5">
+            <label for="day-number" class="text-sm font-semibold"
+              >Số thứ tự ngày</label
+            >
+            <input
+              type="number"
+              id="day-number"
+              step="1"
+              placeholder="Ví dụ: 3"
+              class="rounded-lg border border-line px-4 py-3 outline-none focus:border-f8"
+            />
+            <span class="text-sm text-muted"
+              >Chỉ nhận số nguyên từ 1 đến 7.</span
+            >
+          </div>
+
+          <div class="mt-2 flex gap-3">
+            <button
+              type="submit"
+              class="cursor-pointer rounded-lg bg-f8 px-6 py-3 font-semibold text-white hover:bg-f8/90"
+            >
+              Xem ngày
+            </button>
+            <button
+              type="reset"
+              class="cursor-pointer rounded-lg border border-line px-6 py-3 font-semibold hover:border-f8 hover:text-f8"
+            >
+              Nhập lại
+            </button>
+          </div>
+        </form>
+
+        <section
+          id="weekday-result"
+          class="mt-6 hidden rounded-xl border border-f8 bg-f8-soft px-6 py-5"
+        >
+          <p class="text-xs font-semibold text-muted uppercase">
+            Ngày trong tuần
+          </p>
+          <p id="weekday-name" class="mt-1 text-2xl font-bold">--</p>
+        </section>
+      </div>
+    </main>
+
+    <script src="weekday.js"></script>
+  </body>
+</html>

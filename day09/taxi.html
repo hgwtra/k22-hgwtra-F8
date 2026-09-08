@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3 - Tính tiền cước Taxi | F8</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Be Vietnam Pro", Arial, sans-serif;
+        --color-f8: #f05123;
+        --color-f8-soft: #fff4f0;
+        --color-ink: #292929;
+        --color-muted: #757575;
+        --color-line: #e8ebed;
+        --color-soft: #f7f8fa;
+      }
+    </style>
+  </head>
+
+  <body
+    class="min-h-screen bg-f8-soft bg-linear-to-b from-f8-soft to-white font-sans text-ink"
+  >
+    <main class="mx-auto max-w-2xl px-4 py-12">
+      <p class="mb-6 text-sm font-semibold text-muted">
+        <a href="../index.html" class="hover:text-f8">← Về trang chủ</a>
+      </p>
+
+      <h1 class="text-2xl font-bold sm:text-3xl">
+        Bài 3 — Tính tiền cước Taxi
+      </h1>
+      <p class="mt-2 text-muted">
+        Nhập số km đi được để tính tổng tiền cước phải trả.
+      </p>
+
+      <div
+        class="mt-8 rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8"
+      >
+        <section
+          class="rounded-xl border border-line bg-soft px-5 py-4 text-sm"
+        >
+          <p class="mb-2 font-bold">Bảng giá</p>
+          <ul class="flex flex-col gap-1 text-muted">
+            <li>Giá mở cửa (1 km đầu tiên): 15.000 VNĐ</li>
+            <li>Từ km thứ 2 đến km thứ 5: 13.500 VNĐ / km</li>
+            <li>Từ km thứ 6 trở đi: 11.000 VNĐ / km</li>
+            <li>Đi trên 12 km: giảm 10% tổng tiền cước</li>
+          </ul>
+        </section>
+
+        <form id="taxi-form" class="mt-6 flex flex-col gap-4" novalidate>
+          <div class="flex flex-col gap-1.5">
+            <label for="distance" class="text-sm font-semibold">
+              Số km đi được
+            </label>
+            <input
+              type="number"
+              id="distance"
+              step="0.1"
+              placeholder="Ví dụ: 15"
+              class="rounded-lg border border-line px-4 py-3 outline-none focus:border-f8"
+            />
+            <span class="text-xs text-muted"> Số km không quá 10.000 km. </span>
+          </div>
+
+          <div class="mt-2 flex gap-3">
+            <button
+              type="submit"
+              class="cursor-pointer rounded-lg bg-f8 px-6 py-3 font-semibold text-white hover:bg-f8/90"
+            >
+              Tính tiền
+            </button>
+            <button
+              type="reset"
+              class="cursor-pointer rounded-lg border border-line px-6 py-3 font-semibold hover:border-f8 hover:text-f8"
+            >
+              Nhập lại
+            </button>
+          </div>
+        </form>
+
+        <section
+          id="taxi-result"
+          class="mt-6 hidden rounded-xl border border-f8 bg-f8-soft px-6 py-5"
+        >
+          <p class="text-xs font-semibold text-muted uppercase">
+            Tổng tiền cước
+          </p>
+          <p id="total-fare" class="mt-1 text-2xl font-bold">--</p>
+          <p id="fare-note" class="mt-1 text-sm text-muted"></p>
+        </section>
+      </div>
+    </main>
+
+    <script src="taxi.js"></script>
+  </body>
+</html>
