@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1 - Kiểm tra số nguyên tố | F8</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Be Vietnam Pro", Arial, sans-serif;
+        --color-f8: #f05123;
+        --color-f8-soft: #fff4f0;
+        --color-ink: #292929;
+        --color-muted: #757575;
+        --color-line: #e8ebed;
+        --color-soft: #f7f8fa;
+      }
+    </style>
+  </head>
+
+  <body
+    class="scheme-light min-h-screen bg-f8-soft bg-linear-to-b from-f8-soft to-white font-sans text-ink"
+  >
+    <main class="mx-auto max-w-2xl px-4 py-12">
+      <p class="mb-6 text-sm font-semibold text-muted">
+        <a href="../index.html" class="hover:text-f8">← Về trang chủ</a>
+      </p>
+
+      <h1 class="text-2xl font-bold sm:text-3xl">
+        Bài 1 — Kiểm tra số nguyên tố
+      </h1>
+      <p class="mt-2 text-muted">
+        Nhập một số nguyên n để kiểm tra n có phải là số nguyên tố hay không.
+      </p>
+
+      <div
+        class="mt-8 rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8"
+      >
+        <section
+          class="rounded-xl border border-line bg-soft px-5 py-4 text-sm"
+        >
+          <p class="mb-2 font-bold">Quy tắc</p>
+          <ul class="flex flex-col gap-1 text-muted">
+            <li>Số nguyên tố là số nguyên lớn hơn 1</li>
+            <li>Chỉ chia hết cho 1 và chính nó</li>
+            <li>n = 2 → true</li>
+            <li>n = 7 → true</li>
+            <li>n = 10 → false</li>
+            <li>n = 1 hoặc n ≤ 0 → false</li>
+          </ul>
+        </section>
+
+        <form id="prime-form" class="mt-6 flex flex-col gap-4" novalidate>
+          <div class="flex flex-col gap-1.5">
+            <label for="number-input" class="text-sm font-semibold">
+              Số nguyên n
+            </label>
+            <input
+              type="number"
+              id="number-input"
+              step="1"
+              placeholder="Ví dụ: 7"
+              class="rounded-lg border border-line px-4 py-3 outline-none focus:border-f8"
+            />
+            <span class="text-sm text-muted">Chỉ nhận số nguyên.</span>
+          </div>
+
+          <div class="mt-2 flex gap-3">
+            <button
+              type="submit"
+              class="cursor-pointer rounded-lg bg-f8 px-6 py-3 font-semibold text-white hover:bg-f8/90"
+            >
+              Kiểm tra
+            </button>
+            <button
+              type="reset"
+              class="cursor-pointer rounded-lg border border-line px-6 py-3 font-semibold hover:border-f8 hover:text-f8"
+            >
+              Nhập lại
+            </button>
+          </div>
+        </form>
+
+        <section
+          id="prime-result"
+          class="mt-6 hidden rounded-xl border border-f8 bg-f8-soft px-6 py-5"
+        >
+          <p class="text-xs font-semibold text-muted uppercase">Kết quả</p>
+          <p id="prime-value" class="mt-1 text-2xl font-bold">--</p>
+          <p id="prime-note" class="mt-1 text-sm text-muted">--</p>
+        </section>
+      </div>
+    </main>
+
+    <script src="prime.js"></script>
+  </body>
+</html>

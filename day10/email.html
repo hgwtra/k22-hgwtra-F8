@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3 - Che thông tin email | F8</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Be Vietnam Pro", Arial, sans-serif;
+        --color-f8: #f05123;
+        --color-f8-soft: #fff4f0;
+        --color-ink: #292929;
+        --color-muted: #757575;
+        --color-line: #e8ebed;
+        --color-soft: #f7f8fa;
+      }
+    </style>
+  </head>
+
+  <body
+    class="scheme-light min-h-screen bg-f8-soft bg-linear-to-b from-f8-soft to-white font-sans text-ink"
+  >
+    <main class="mx-auto max-w-2xl px-4 py-12">
+      <p class="mb-6 text-sm font-semibold text-muted">
+        <a href="../index.html" class="hover:text-f8">← Về trang chủ</a>
+      </p>
+
+      <h1 class="text-2xl font-bold sm:text-3xl">Bài 3 — Che thông tin email</h1>
+      <p class="mt-2 text-muted">
+        Nhập một email để che một phần tên tài khoản trước ký tự @.
+      </p>
+
+      <div
+        class="mt-8 rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8"
+      >
+        <section
+          class="rounded-xl border border-line bg-soft px-5 py-4 text-sm"
+        >
+          <p class="mb-2 font-bold">Quy tắc</p>
+          <ul class="flex flex-col gap-1 text-muted">
+            <li>Email gồm tên tài khoản và domain, ngăn cách bởi @</li>
+            <li>Tên tài khoản dài hơn 4 ký tự: giữ 2 ký tự đầu và 2 ký tự cuối</li>
+            <li>Các ký tự ở giữa thay bằng dấu *</li>
+            <li>Tên tài khoản từ 4 ký tự trở xuống: chỉ giữ ký tự đầu tiên</li>
+            <li>Giữ nguyên phần domain sau ký tự @</li>
+            <li>"alexander@gmail.com" → "al****er@gmail.com"</li>
+            <li>"john@gmail.com" → "j***@gmail.com"</li>
+          </ul>
+        </section>
+
+        <form id="email-form" class="mt-6 flex flex-col gap-4" novalidate>
+          <div class="flex flex-col gap-1.5">
+            <label for="email-input" class="text-sm font-semibold">Email</label>
+            <input
+              type="text"
+              id="email-input"
+              placeholder="Ví dụ: alexander@gmail.com"
+              class="rounded-lg border border-line px-4 py-3 outline-none focus:border-f8"
+            />
+            <span class="text-sm text-muted"
+              >Email phải chứa ký tự @, có tên tài khoản và domain.</span
+            >
+          </div>
+
+          <div class="mt-2 flex gap-3">
+            <button
+              type="submit"
+              class="cursor-pointer rounded-lg bg-f8 px-6 py-3 font-semibold text-white hover:bg-f8/90"
+            >
+              Che email
+            </button>
+            <button
+              type="reset"
+              class="cursor-pointer rounded-lg border border-line px-6 py-3 font-semibold hover:border-f8 hover:text-f8"
+            >
+              Nhập lại
+            </button>
+          </div>
+        </form>
+
+        <section
+          id="email-result"
+          class="mt-6 hidden rounded-xl border border-f8 bg-f8-soft px-6 py-5"
+        >
+          <p class="text-xs font-semibold text-muted uppercase">
+            Email sau khi che
+          </p>
+          <p id="email-value" class="mt-1 text-2xl font-bold break-all">--</p>
+        </section>
+      </div>
+    </main>
+
+    <script src="email.js"></script>
+  </body>
+</html>
