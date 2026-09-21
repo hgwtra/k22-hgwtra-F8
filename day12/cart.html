@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2 - Bộ lọc và sắp xếp giỏ hàng | F8</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Be Vietnam Pro", Arial, sans-serif;
+        --color-f8: #f05123;
+        --color-f8-soft: #fff4f0;
+        --color-ink: #292929;
+        --color-muted: #757575;
+        --color-line: #e8ebed;
+        --color-soft: #f7f8fa;
+      }
+    </style>
+  </head>
+
+  <body
+    class="scheme-light min-h-screen bg-f8-soft bg-linear-to-b from-f8-soft to-white font-sans text-ink"
+  >
+    <main class="mx-auto max-w-3xl px-4 py-12">
+      <p class="mb-6 text-sm font-semibold text-muted">
+        <a href="../index.html" class="hover:text-f8">← Về trang chủ</a>
+      </p>
+
+      <h1 class="text-2xl font-bold sm:text-3xl">
+        Bài 2 — Bộ lọc và sắp xếp giỏ hàng
+      </h1>
+      <p class="mt-2 text-muted">
+        Lọc sản phẩm theo danh mục, sắp xếp theo giá và tính tổng tiền của danh
+        sách sau khi lọc.
+      </p>
+
+      <div
+        class="mt-8 rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8"
+      >
+        <section
+          class="rounded-xl border border-line bg-soft px-5 py-4 text-sm"
+        >
+          <p class="mb-2 font-bold">Yêu cầu xử lý</p>
+          <ul class="flex flex-col gap-1 text-muted">
+            <li>Dùng filter để lọc sản phẩm theo category</li>
+            <li>Dùng sort để sắp xếp theo price</li>
+            <li>Dùng map để tạo mảng chuỗi mô tả sản phẩm</li>
+            <li>Không làm thay đổi trực tiếp mảng products ban đầu</li>
+            <li>Tổng tiền thay đổi đúng theo danh sách sau khi lọc</li>
+          </ul>
+        </section>
+
+        <div class="mt-6 flex flex-col gap-4 sm:flex-row">
+          <div class="flex flex-1 flex-col gap-1.5">
+            <label for="category-filter" class="text-sm font-semibold">
+              Danh mục
+            </label>
+            <select
+              id="category-filter"
+              class="cursor-pointer rounded-lg border border-line px-4 py-3 outline-none focus:border-f8"
+            >
+              <option value="all">Tất cả</option>
+              <option value="Điện thoại">Điện thoại</option>
+              <option value="Laptop">Laptop</option>
+              <option value="Phụ kiện">Phụ kiện</option>
+            </select>
+          </div>
+
+          <div class="flex flex-1 flex-col gap-1.5">
+            <label for="sort-filter" class="text-sm font-semibold">
+              Sắp xếp theo giá
+            </label>
+            <select
+              id="sort-filter"
+              class="cursor-pointer rounded-lg border border-line px-4 py-3 outline-none focus:border-f8"
+            >
+              <option value="default">Mặc định</option>
+              <option value="asc">Giá tăng dần</option>
+              <option value="desc">Giá giảm dần</option>
+            </select>
+          </div>
+        </div>
+
+        <section class="mt-6">
+          <div class="flex items-center justify-between">
+            <p class="text-xs font-semibold text-muted uppercase">
+              Danh sách sản phẩm kèm mô tả
+            </p>
+          </div>
+
+          <ul id="product-list" class="mt-2 flex flex-col gap-2">
+            <li class="rounded-xl border border-line bg-soft px-5 py-4 text-sm">
+              Chưa có sản phẩm nào.
+            </li>
+          </ul>
+        </section>
+
+        <section class="mt-6 rounded-xl border border-f8 bg-f8-soft px-6 py-5">
+          <p class="text-xs font-semibold text-muted uppercase">Tổng tiền</p>
+          <p id="total-value" class="mt-1 text-2xl font-bold">0</p>
+        </section>
+      </div>
+    </main>
+
+    <script src="cart.js"></script>
+  </body>
+</html>

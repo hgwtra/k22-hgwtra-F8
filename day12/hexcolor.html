@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1 - Random màu nền bằng mã HEX | F8</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Be Vietnam Pro", Arial, sans-serif;
+        --color-f8: #f05123;
+        --color-f8-soft: #fff4f0;
+        --color-ink: #292929;
+        --color-muted: #757575;
+        --color-line: #e8ebed;
+        --color-soft: #f7f8fa;
+      }
+    </style>
+  </head>
+
+  <body
+    class="scheme-light min-h-screen bg-f8-soft bg-linear-to-b from-f8-soft to-white font-sans text-ink"
+  >
+    <main class="mx-auto max-w-2xl px-4 py-12">
+      <p class="mb-6 text-sm font-semibold text-muted">
+        <a href="../index.html" class="hover:text-f8">← Về trang chủ</a>
+      </p>
+
+      <h1 class="text-2xl font-bold sm:text-3xl">
+        Bài 1 — Random màu nền bằng mã HEX
+      </h1>
+      <p class="mt-2 text-muted">
+        Bấm nút để tạo một mã màu HEX ngẫu nhiên và đổi màu nền.
+      </p>
+
+      <div
+        id="color-preview"
+        class="mt-6 flex h-40 items-center justify-center rounded-xl border border-line bg-soft"
+      >
+        <span
+          id="color-value"
+          class="rounded-lg bg-white/85 px-4 py-2 text-xl font-bold"
+        >
+          #000000
+        </span>
+      </div>
+
+      <div class="mt-6 flex gap-3">
+        <button
+          type="button"
+          id="random-color-btn"
+          class="cursor-pointer rounded-lg bg-f8 px-6 py-3 font-semibold text-white hover:bg-f8/90"
+        >
+          Random màu
+        </button>
+      </div>
+    </main>
+
+    <script src="hexcolor.js"></script>
+  </body>
+</html>

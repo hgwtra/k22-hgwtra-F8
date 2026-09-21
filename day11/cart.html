@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1 - Quản lý giỏ hàng bằng Object | F8</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Be Vietnam Pro", Arial, sans-serif;
+        --color-f8: #f05123;
+        --color-f8-soft: #fff4f0;
+        --color-ink: #292929;
+        --color-muted: #757575;
+        --color-line: #e8ebed;
+        --color-soft: #f7f8fa;
+      }
+    </style>
+  </head>
+
+  <body
+    class="scheme-light min-h-screen bg-f8-soft bg-linear-to-b from-f8-soft to-white font-sans text-ink"
+  >
+    <main class="mx-auto max-w-2xl px-4 py-12">
+      <p class="mb-6 text-sm font-semibold text-muted">
+        <a href="../index.html" class="hover:text-f8">← Về trang chủ</a>
+      </p>
+
+      <h1 class="text-2xl font-bold sm:text-3xl">
+        Bài 1 — Quản lý giỏ hàng bằng Function và Object
+      </h1>
+      <p class="mt-2 text-muted">Bài tập chạy hoàn toàn trên console.</p>
+
+      <div
+        class="mt-8 rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8"
+      >
+        <section class="mt-6">
+          <p class="text-xs font-semibold text-muted uppercase">
+            Cần hoàn thiện trong cart.js
+          </p>
+          <ul class="mt-2 flex flex-col gap-2 text-sm">
+            <li class="rounded-xl border border-line px-5 py-3">
+              <span class="font-semibold">get totalQuantity</span>
+              <span class="text-muted"> - tổng số lượng sản phẩm</span>
+            </li>
+            <li class="rounded-xl border border-line px-5 py-3">
+              <span class="font-semibold">get subtotal</span>
+              <span class="text-muted">
+                - tổng tiền hàng (price × quantity)</span
+              >
+            </li>
+            <li class="rounded-xl border border-line px-5 py-3">
+              <span class="font-semibold">set applyCoupon</span>
+              <span class="text-muted">
+                - gán _discountRate nếu mã hợp lệ, sai thì báo lỗi</span
+              >
+            </li>
+            <li class="rounded-xl border border-line px-5 py-3">
+              <span class="font-semibold">get totalPrice</span>
+              <span class="text-muted"> - subtotal sau khi trừ giảm giá</span>
+            </li>
+            <li class="rounded-xl border border-line px-5 py-3">
+              <span class="font-semibold">addItems(...newItems)</span>
+              <span class="text-muted">
+                - trùng id thì cộng dồn, chưa có thì quantity mặc định 1</span
+              >
+            </li>
+            <li class="rounded-xl border border-line px-5 py-3">
+              <span class="font-semibold">updateQuantity(id, newQuantity)</span>
+              <span class="text-muted">
+                - update số lượng sản phẩm theo id</span
+              >
+            </li>
+            <li class="rounded-xl border border-line px-5 py-3">
+              <span class="font-semibold">removeItem(id)</span>
+              <span class="text-muted"> - xoá sản phẩm theo id</span>
+            </li>
+            <li class="rounded-xl border border-line px-5 py-3">
+              <span class="font-semibold">getItemsByCategory(category)</span>
+              <span class="text-muted"> - lọc sản phẩm theo danh mục</span>
+            </li>
+            <li class="rounded-xl border border-line px-5 py-3">
+              <span class="font-semibold">printInvoice()</span>
+              <span class="text-muted"> - in hoá đơn chi tiết ra console</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <script src="cart.js"></script>
+  </body>
+</html>

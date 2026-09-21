@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3 - Tạo mã OTP ngẫu nhiên | F8</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Be Vietnam Pro", Arial, sans-serif;
+        --color-f8: #f05123;
+        --color-f8-soft: #fff4f0;
+        --color-ink: #292929;
+        --color-muted: #757575;
+        --color-line: #e8ebed;
+        --color-soft: #f7f8fa;
+      }
+    </style>
+  </head>
+
+  <body
+    class="scheme-light min-h-screen bg-f8-soft bg-linear-to-b from-f8-soft to-white font-sans text-ink"
+  >
+    <main class="mx-auto max-w-2xl px-4 py-12">
+      <p class="mb-6 text-sm font-semibold text-muted">
+        <a href="../index.html" class="hover:text-f8">← Về trang chủ</a>
+      </p>
+
+      <h1 class="text-2xl font-bold sm:text-3xl">
+        Bài 3 — Tạo mã OTP ngẫu nhiên
+      </h1>
+      <p class="mt-2 text-muted">
+        Bấm nút để sinh mã OTP gồm 6 chữ số. Gọi hàm nhiều lần để kiểm tra kết
+        quả.
+      </p>
+
+      <div
+        class="mt-8 rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8"
+      >
+        <section
+          class="rounded-xl border border-line bg-soft px-5 py-4 text-sm"
+        >
+          <p class="mb-2 font-bold">Quy tắc</p>
+          <ul class="flex flex-col gap-1 text-muted">
+            <li>Hàm generateOTP() không có tham số đầu vào</li>
+            <li>Kết quả là một số gồm đúng 6 chữ số</li>
+            <li>OTP nằm trong khoảng 100000 - 999999</li>
+          </ul>
+        </section>
+
+        <section
+          class="mt-6 rounded-xl border border-f8 bg-f8-soft px-6 py-5 text-center"
+        >
+          <p class="text-xs font-semibold text-muted uppercase">Mã OTP</p>
+          <p id="otp-value" class="mt-1 text-4xl font-bold tracking-widest">
+            ------
+          </p>
+        </section>
+
+        <div class="mt-6 flex gap-3">
+          <button
+            type="button"
+            id="otp-btn"
+            class="cursor-pointer rounded-lg bg-f8 px-6 py-3 font-semibold text-white hover:bg-f8/90"
+          >
+            Tạo mã OTP
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="otp.js"></script>
+  </body>
+</html>
